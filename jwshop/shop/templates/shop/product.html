@@ -1,0 +1,43 @@
+{% extends 'shop/basic.html' %}
+{%block title%} {{product.product_name}} - My Awesome cart{% endblock %}
+{%block css%}
+    img {
+
+    height: 445px;
+    width: 356px;
+}
+.disc{
+    margin-top:60px;
+}
+{% endblock%}
+{%block body%}
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                <img src="/media/{{product.image}}">
+                </div>
+
+            </div>
+            <div class="col-md-4 disc">
+
+                <h4>{{product.product_name}}</h4>
+                <p><b>RS.{{product.price}}</b></p>
+                <p>{{product.product_disc}}</p>
+                <div class="row">
+                    
+                 <button class="btn btn-primary mx-2 my-2">Add to Cart</button>
+                 <button class="btn btn-primary mx-2 my-2" >Buy Now</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+ {% endblock %}
+
+ 
+
+
